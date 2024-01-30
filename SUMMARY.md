@@ -21,3 +21,4 @@
 * [Detail-4-Rule of Five](detail-4-rule-of-five.md)
 * [Detail-5-Locks](detail-5-locks.md)
 * [Detail-6-Singleton](detail-6-singleton.md)
+* [Detail-7-purevirtual](detail-7-purevirtual.md)
