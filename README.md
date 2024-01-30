@@ -1,2 +1,2 @@
-# cppFAQ
-cpp FAQ
+# Cover
+
