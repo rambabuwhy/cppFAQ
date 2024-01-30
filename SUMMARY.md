@@ -14,3 +14,4 @@
 * [Detail - 1](detail-1.md)
 * [Detail - 2](detail-2.md)
 * [Detail - 3](detail-3.md)
+* [Detail - 4](detail-4.md)
