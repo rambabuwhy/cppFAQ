@@ -16,6 +16,7 @@
 * [Static - 3](static-3.md)
 * [Static - 4](static-4.md)
 * [Design Pattern- Summary](design-pattern-summary.md)
+* [SOLID-Summary](solid-summary.md)
 * [Detail-1-Covariance](detail-1-covariance.md)
 * [Detail-2-Explicit](detail-2-explicit.md)
 * [Detail-3-Mutable](detail-3-mutable.md)
