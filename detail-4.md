@@ -1,5 +1,7 @@
 # Detail - 4
 
+## Rule of Five
+
 The "Rule of Five" in C++ is a set of guidelines related to resource management in classes. It suggests that if a class needs to define or disable any one of the following five special member functions, then it likely needs to define or disable all of them. The five special member functions are:
 
 1. Destructor (`~ClassName()`): Responsible for releasing resources when an object goes out of scope or is explicitly deleted.
