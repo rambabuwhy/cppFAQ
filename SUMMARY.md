@@ -18,6 +18,8 @@
 * [Smart pointer-1](smart-pointer-1.md)
 * [Smart pointer-2](smart-pointer-2.md)
 * [Smart pointer-3](smart-pointer-3.md)
+* [Smart pointer-4](smart-pointer-4.md)
+* [Smart pointer-5](smart-pointer-5.md)
 * [Thread -1](thread-1.md)
 * [Thread-2](thread-2.md)
 * [Thread-3](thread-3.md)
