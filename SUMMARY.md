@@ -17,6 +17,8 @@
 * [Static - 4](static-4.md)
 * [Thread -1](thread-1.md)
 * [Thread-2](thread-2.md)
+* [Thread-3](thread-3.md)
+* [Thread-4](thread-4.md)
 * [Design Pattern- 1](design-pattern-1.md)
 * [Design Pattern- 2](design-pattern-2.md)
 * [SOLID-Summary](solid-summary.md)
