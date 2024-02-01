@@ -330,36 +330,4 @@ int main() {
 
 ***
 
-#### Problem 6: Single Instance
-
-**Problem:** Implement a mechanism to ensure that only a single instance of a class can be created across multiple threads using C++. Ensure that the instance is lazily initialized and thread-safe.
-
-**Code:**
-
-```cpp
-#include <iostream>
-#include <mutex>
-
-class Singleton {
-private:
-    Singleton() {} // Private constructor
-
-public:
-    static Singleton& getInstance() {
-        static Singleton instance;
-        return instance;
-    }
-};
-
-int main() {
-    Singleton& obj1 = Singleton::getInstance();
-    Singleton& obj2 = Singleton::getInstance();
-
-    std::cout << "obj1 address: " << &obj1 << std::endl;
-    std::cout << "obj2 address: " << &obj2 << std::endl;
-
-    return 0;
-}
-```
-
-**Explanation:** This problem assesses the candidate's understanding of the singleton pattern and thread-safe lazy initialization. The `Singleton` class ensures that only one instance is created, and the `getInstance` method provides a thread-safe way to access it.
+####

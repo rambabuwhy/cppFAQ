@@ -20,6 +20,7 @@
 * [Thread-3](thread-3.md)
 * [Thread-4](thread-4.md)
 * [Thread-5](thread-5.md)
+* [Thread-6](thread-6.md)
 * [Design Pattern- 1](design-pattern-1.md)
 * [Design Pattern- 2](design-pattern-2.md)
 * [SOLID-Summary](solid-summary.md)
