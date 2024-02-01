@@ -15,6 +15,8 @@
 * [Static - 2](static-2.md)
 * [Static - 3](static-3.md)
 * [Static - 4](static-4.md)
+* [Smart pointer-1](smart-pointer-1.md)
+* [Smart pointer-2](smart-pointer-2.md)
 * [Thread -1](thread-1.md)
 * [Thread-2](thread-2.md)
 * [Thread-3](thread-3.md)
