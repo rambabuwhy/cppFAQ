@@ -77,48 +77,71 @@ public:
 };
 ```
 
-#### 13. What is the Command design pattern?
+#### 13. What is the Facade Design Pattern?
 
-**Answer:** The Command pattern turns a request into a stand-alone object, containing all information about the request. This allows for parameterization of clients with different requests, queuing of requests, and logging of the requests.
+**Answer:** The Facade Design Pattern is a structural pattern that provides a simplified interface to a set of interfaces in a subsystem, making it easier to use. It involves creating a unified interface that wraps a set of interfaces in a subsystem, thus making the subsystem easier to use for clients.
 
 ```cpp
-class Command {
-public:
-    virtual void execute() = 0;
-};
+#include <iostream>
 
-class Receiver {
+// Subsystem class 1
+class Subsystem1 {
 public:
-    void action() {
-        std::cout << "Receiver action\n";
+    void operation1() {
+        std::cout << "Subsystem1: Operation 1\n";
+    }
+
+    void operation2() {
+        std::cout << "Subsystem1: Operation 2\n";
     }
 };
 
-class ConcreteCommand : public Command {
+// Subsystem class 2
+class Subsystem2 {
+public:
+    void operation1() {
+        std::cout << "Subsystem2: Operation 1\n";
+    }
+
+    void operation2() {
+        std::cout << "Subsystem2: Operation 2\n";
+    }
+};
+
+// Facade class
+class Facade {
+public:
+    Facade() {
+        subsystem1 = new Subsystem1();
+        subsystem2 = new Subsystem2();
+    }
+
+    ~Facade() {
+        delete subsystem1;
+        delete subsystem2;
+    }
+
+    // Facade methods that simplify the interface for the client
+    void operation() {
+        std::cout << "Facade: Operation\n";
+        subsystem1->operation1();
+        subsystem1->operation2();
+        subsystem2->operation1();
+        subsystem2->operation2();
+    }
+
 private:
-    Receiver* receiver;
-
-public:
-    ConcreteCommand(Receiver* receiver) : receiver(receiver) {}
-
-    void execute() override {
-        receiver->action();
-    }
+    Subsystem1* subsystem1;
+    Subsystem2* subsystem2;
 };
 
-class Invoker {
-private:
-    Command* command;
+// Client code
+int main() {
+    Facade facade;
+    facade.operation();
 
-public:
-    void setCommand(Command* newCommand) {
-        command = newCommand;
-    }
-
-    void executeCommand() {
-        command->execute();
-    }
-};
+    return 0;
+}
 ```
 
 #### 14. Explain the Chain of Responsibility design pattern.
