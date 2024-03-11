@@ -33,6 +33,7 @@
 * [Design Pattern-Mediator](design-pattern-mediator.md)
 * [Design Pattern- Interpreter](design-pattern-interpreter.md)
 * [Design Pattern-Memento](design-pattern-memento.md)
+* [Design Pattern-Command](design-pattern-command.md)
 * [SOLID-Summary](solid-summary.md)
 * [Detail-1-Covariance](detail-1-covariance.md)
 * [Detail-2-Explicit](detail-2-explicit.md)
