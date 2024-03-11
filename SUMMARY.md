@@ -34,6 +34,7 @@
 * [Design Pattern- Interpreter](design-pattern-interpreter.md)
 * [Design Pattern-Memento](design-pattern-memento.md)
 * [Design Pattern-Command](design-pattern-command.md)
+* [Design Pattern-Singleton](design-pattern-singleton.md)
 * [SOLID-Summary](solid-summary.md)
 * [Detail-1-Covariance](detail-1-covariance.md)
 * [Detail-2-Explicit](detail-2-explicit.md)
