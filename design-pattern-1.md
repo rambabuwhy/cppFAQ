@@ -85,7 +85,121 @@ public:
 };
 ```
 
-#### 5. What is the Strategy design pattern?
+#### 5. Abstract Factory design pattern
+
+The Abstract Factory design pattern is a creational pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern involves defining an interface or abstract class for creating families of related objects, and concrete subclasses or implementations to create the actual objects. Here's a simple example of the Abstract Factory pattern in C++:
+
+```cpp
+#include <iostream>
+#include <string>
+
+// Abstract Product A
+class AbstractProductA {
+public:
+    virtual std::string getName() const = 0;
+};
+
+// Concrete Product A1
+class ProductA1 : public AbstractProductA {
+public:
+    std::string getName() const override {
+        return "Product A1";
+    }
+};
+
+// Concrete Product A2
+class ProductA2 : public AbstractProductA {
+public:
+    std::string getName() const override {
+        return "Product A2";
+    }
+};
+
+// Abstract Product B
+class AbstractProductB {
+public:
+    virtual std::string getName() const = 0;
+};
+
+// Concrete Product B1
+class ProductB1 : public AbstractProductB {
+public:
+    std::string getName() const override {
+        return "Product B1";
+    }
+};
+
+// Concrete Product B2
+class ProductB2 : public AbstractProductB {
+public:
+    std::string getName() const override {
+        return "Product B2";
+    }
+};
+
+// Abstract Factory
+class AbstractFactory {
+public:
+    virtual AbstractProductA* createProductA() const = 0;
+    virtual AbstractProductB* createProductB() const = 0;
+};
+
+// Concrete Factory 1
+class ConcreteFactory1 : public AbstractFactory {
+public:
+    AbstractProductA* createProductA() const override {
+        return new ProductA1();
+    }
+
+    AbstractProductB* createProductB() const override {
+        return new ProductB1();
+    }
+};
+
+// Concrete Factory 2
+class ConcreteFactory2 : public AbstractFactory {
+public:
+    AbstractProductA* createProductA() const override {
+        return new ProductA2();
+    }
+
+    AbstractProductB* createProductB() const override {
+        return new ProductB2();
+    }
+};
+
+int main() {
+    // Client code using Abstract Factory 1
+    AbstractFactory* factory1 = new ConcreteFactory1();
+    AbstractProductA* productA1 = factory1->createProductA();
+    AbstractProductB* productB1 = factory1->createProductB();
+
+    std::cout << "Product A: " << productA1->getName() << std::endl;
+    std::cout << "Product B: " << productB1->getName() << std::endl;
+
+    delete factory1;
+    delete productA1;
+    delete productB1;
+
+    // Client code using Abstract Factory 2
+    AbstractFactory* factory2 = new ConcreteFactory2();
+    AbstractProductA* productA2 = factory2->createProductA();
+    AbstractProductB* productB2 = factory2->createProductB();
+
+    std::cout << "Product A: " << productA2->getName() << std::endl;
+    std::cout << "Product B: " << productB2->getName() << std::endl;
+
+    delete factory2;
+    delete productA2;
+    delete productB2;
+
+    return 0;
+}
+```
+
+In this example, `AbstractProductA` and `AbstractProductB` are abstract product classes, while `ProductA1`, `ProductA2`, `ProductB1`, and `ProductB2` are their concrete implementations. The `AbstractFactory` interface declares methods for creating these products, and `ConcreteFactory1` and `ConcreteFactory2` are two concrete factory classes implementing the abstract factory interface.
+
+#### 6. What is the Strategy design pattern?
 
 **Answer:** The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. It lets the client vary its behavior independently from the context that uses it.
 
@@ -119,7 +233,7 @@ public:
 };
 ```
 
-#### 6. Explain the Decorator design pattern.
+#### 7. Explain the Decorator design pattern.
 
 **Answer:** The Decorator pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
 
@@ -163,7 +277,7 @@ public:
 };
 ```
 
-#### 7. What is the Adapter design pattern?
+#### 8. What is the Adapter design pattern?
 
 **Answer:** The Adapter pattern allows the interface of an existing class to be used as another interface. It is often used to make existing classes work with others without modifying their source code.
 
@@ -193,7 +307,7 @@ public:
 };
 ```
 
-#### 8. Explain the Composite design pattern.
+#### 9. Explain the Composite design pattern.
 
 **Answer:** The Composite pattern composes objects into tree structures to represent part-whole hierarchies. It allows clients to treat individual objects and compositions of objects uniformly.
 
@@ -231,7 +345,7 @@ public:
 };
 ```
 
-#### 9. What is the Command design pattern?
+#### 10. What is the Command design pattern?
 
 **Answer:** The Command pattern turns a request into a stand-alone object, containing all information about the request. This allows for parameterization of clients with different requests, queuing of requests, and logging of the requests.
 
@@ -275,7 +389,7 @@ public:
 };
 ```
 
-#### 10. Explain the Proxy design pattern.
+#### 11. Explain the Proxy design pattern.
 
 **Answer:** The Proxy pattern provides a surrogate or placeholder for another object to control access to it.
 

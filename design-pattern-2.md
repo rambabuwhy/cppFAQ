@@ -521,3 +521,87 @@ public:
 ```
 
 These additional design pattern questions cover a range of patterns, providing a comprehensive understanding of common design patterns used in software development.
+
+21. Explain the Broker design pattern.
+
+The Broker design pattern is a structural pattern that defines a mediator (or broker) object that encapsulates the communication between multiple objects, allowing them to interact without being directly connected. This pattern promotes loose coupling and helps manage the complexity of communication between different components.
+
+Here's a basic example of implementing the Broker design pattern in C++:
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <string>
+
+class Colleague;
+
+// Broker interface
+class Mediator {
+public:
+    virtual void sendMessage(const std::string& message, Colleague* colleague) const = 0;
+};
+
+// Concrete Mediator
+class ConcreteMediator : public Mediator {
+public:
+    void addColleague(Colleague* colleague) {
+        colleagues.push_back(colleague);
+    }
+
+    void sendMessage(const std::string& message, Colleague* sender) const override {
+        for (Colleague* colleague : colleagues) {
+            if (colleague != sender) {
+                colleague->receiveMessage(message);
+            }
+        }
+    }
+
+private:
+    std::vector<Colleague*> colleagues;
+};
+
+// Colleague interface
+class Colleague {
+public:
+    Colleague(Mediator* mediator, const std::string& name)
+        : mediator(mediator), name(name) {}
+
+    virtual void sendMessage(const std::string& message) const {
+        mediator->sendMessage(message, this);
+    }
+
+    virtual void receiveMessage(const std::string& message) const {
+        std::cout << name << " received message: " << message << std::endl;
+    }
+
+protected:
+    Mediator* mediator;
+    std::string name;
+};
+
+// Concrete Colleague
+class ConcreteColleague : public Colleague {
+public:
+    ConcreteColleague(Mediator* mediator, const std::string& name)
+        : Colleague(mediator, name) {}
+
+    void doSomething() {
+        std::string message = "Hello, everyone!";
+        sendMessage(message);
+    }
+};
+
+int main() {
+    ConcreteMediator mediator;
+
+    ConcreteColleague colleague1(&mediator, "Colleague 1");
+    ConcreteColleague colleague2(&mediator, "Colleague 2");
+
+    mediator.addColleague(&colleague1);
+    mediator.addColleague(&colleague2);
+
+    colleague1.doSomething();
+
+    return 0;
+}
+```
