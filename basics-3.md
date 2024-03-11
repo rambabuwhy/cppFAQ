@@ -1,41 +1,41 @@
-# Basics - 3
+# Basics - 5
 
-#### 11. **What is a smart pointer in C++?**
+#### 21. **What is the difference between `delete` and `delete[]` when freeing memory?**
 
-**Answer:** A smart pointer in C++ is an object that acts like a pointer but provides additional functionalities, such as automatic memory management. Examples include `std::unique_ptr` and `std::shared_ptr`.
+**Answer:** `delete` is used to deallocate memory for a single object allocated with `new`, while `delete[]` is used to deallocate memory for an array of objects allocated with `new[]`. Using the wrong one can lead to undefined behavior.
 
-#### 12. **Explain the difference between `const` and `constexpr` in C++.**
+#### 22. **Explain the role of the `const_iterator` in C++ standard containers.**
 
-**Answer:** `const` is used to indicate that a variable's value cannot be modified, while `constexpr` is used to specify that a variable or function can be evaluated at compile time.
+**Answer:** `const_iterator` is an iterator that allows read-only access to the elements of a C++ standard container. It is used when iterating over a container without modifying its elements.
 
-#### 13. **What is an inline function?**
+#### 23. **What is the purpose of the `friend` keyword in C++?**
 
-**Answer:** An inline function is a function that the compiler may choose to expand at the point of the function call, rather than performing a regular function call. It is a suggestion to the compiler and can improve performance for small functions.
+**Answer:** The `friend` keyword is used to grant non-member functions or other classes access to private or protected members of a class. It is often used to allow specific functions or classes to access internal details without violating encapsulation.
 
-#### 14. **What is the purpose of the `mutable` keyword in C++?**
+#### 24. **Explain the difference between shallow copy and deep copy in the context of copy constructors.**
 
-**Answer:** The `mutable` keyword is used to indicate that a particular data member of a `const` object can be modified. It is often used with `mutable` members in classes.
+**Answer:** A shallow copy in a copy constructor copies the memory addresses of the original object's members, while a deep copy creates new memory locations and copies the content of the members.
 
-#### 15. **Explain the concept of RAII (Resource Acquisition Is Initialization) in C++.**
+#### 25. **What is the significance of the `volatile` keyword in C++?**
 
-**Answer:** RAII is a programming technique where resource management (like memory allocation) is tied to object lifetime. Resources are acquired in the constructor and released in the destructor.
+**Answer:** The `volatile` keyword is used to indicate that a variable may be changed at any time by external factors, such as hardware. It prevents the compiler from optimizing away reads or writes to the variable.
 
-#### 16. **What is the difference between `override` and `final` specifiers in C++?**
+#### 26. **How does exception handling work in C++?**
 
-**Answer:** The `override` specifier is used to indicate that a function is intended to override a virtual function, while `final` is used to indicate that a virtual function cannot be overridden further in derived classes.
+**Answer:** C++ uses the `try`, `catch`, and `throw` keywords for exception handling. Code that might throw an exception is placed in a `try` block, and the corresponding exception is caught in a `catch` block. Exceptions are thrown using the `throw` keyword.
 
-#### 17. **What is the purpose of the `std::move` function?**
+#### 27. **What is the purpose of the `std::move` constructor in C++?**
 
-**Answer:** `std::move` is used to convert an lvalue into an rvalue, enabling the efficient transfer of ownership or resources. It is often used with move semantics in C++11 and later.
+**Answer:** The `std::move` constructor is used to explicitly convert an object into an rvalue, enabling move semantics. It is often used to efficiently transfer ownership or resources between objects.
 
-#### 18. **What are the differences between `std::vector` and `std::array`?**
+#### 28. **Explain the difference between stack and heap memory in C++.**
 
-**Answer:** `std::vector` is a dynamic array that can change in size, while `std::array` is a fixed-size array with a static size specified at compile time. `std::vector` is more flexible but may incur dynamic memory allocation overhead.
+**Answer:** Stack memory is used for local variables and function call management, while heap memory is dynamically allocated and deallocated during runtime. Stack memory is faster but limited in size, while heap memory provides more flexibility.
 
-#### 19. **Explain the purpose of the `explicit` keyword in a constructor.**
+#### 29. **What is the purpose of the `explicit` specifier in C++?**
 
-**Answer:** The `explicit` keyword in a constructor prevents implicit type conversions during object construction. It ensures that the constructor is only used for explicit type conversions.
+**Answer:** The `explicit` specifier is used to prevent implicit type conversions by constructors. It ensures that a constructor is only used for explicit type conversions and not for implicit conversions.
 
-#### 20. **What is the role of the `typeid` operator in C++?**
+#### 30. **What is a lambda expression in C++?**
 
-**Answer:** The `typeid` operator is used to obtain information about the type of an expression or an object at runtime. It returns a `std::type_info` object, which can be used for type checking and dynamic type identification.
+**Answer:** A lambda expression is an anonymous function defined using the `[]` syntax. It allows the creation of functions locally and is often used in conjunction with algorithms or functional programming constructs.

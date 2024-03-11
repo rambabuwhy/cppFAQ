@@ -1,13 +1,12 @@
 # Table of contents
 
 * [Cover](README.md)
+* [Index](index.md)
 * [unit-1](unit-1.md)
 * [Basics - 1](basics-1.md)
 * [Basics - 2](basics-2.md)
 * [Basics - 3](basics-3.md)
 * [Basics - 4](basics-4.md)
-* [Basics - 5](basics-5.md)
-* [Basics - 6](basics-6.md)
 * [unit-2](unit-2.md)
 * [Virtual Functions - 1](virtual-functions-1.md)
 * [Virtual Functions - 2](virtual-functions-2.md)
