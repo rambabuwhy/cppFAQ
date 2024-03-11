@@ -40,6 +40,8 @@
 * [Design Pattern-Strategy](design-pattern-strategy.md)
 * [Design Pattern-Decorator](design-pattern-decorator.md)
 * [Design Pattern-Adapter](design-pattern-adapter.md)
+* [Design Pattern-Composite](design-pattern-composite.md)
+* [Design Pattern- Proxy](design-pattern-proxy.md)
 * [SOLID-Summary](solid-summary.md)
 * [Detail-1-Covariance](detail-1-covariance.md)
 * [Detail-2-Explicit](detail-2-explicit.md)
