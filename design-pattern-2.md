@@ -218,58 +218,64 @@ public:
 
 **Answer:** The Memento pattern provides the ability to restore an object to its previous state.
 
-```cpp
-#include <iostream>
-#include <string>
+<pre class="language-cpp"><code class="lang-cpp">#include &#x3C;iostream>
+#include &#x3C;string>
 
+// Memento class
 class Memento {
-private:
-    std::string state;
-
 public:
-    Memento(const std::string& s) : state(s) {}
+    Memento(const std::string&#x26; state) : state_(state) {}
 
-    const std::string& getState() const {
-        return state;
+    std::string getState() const {
+        return state_;
     }
+
+private:
+    std::string state_;
 };
 
+// Originator class
 class Originator {
-private:
-    std::string state;
-
 public:
-    void setState(const std::string& s) {
-        state = s;
+    void setState(const std::string&#x26; state) {
+        state_ = state;
+        std::cout &#x3C;&#x3C; "State set to: " &#x3C;&#x3C; state &#x3C;&#x3C; std::endl;
     }
 
     Memento createMemento() {
-        return Memento(state);
+        std::cout &#x3C;&#x3C; "Creating Memento..." &#x3C;&#x3C; std::endl;
+        return Memento(state_);
     }
 
-    void restoreMemento(const Memento& memento) {
-        state = memento.getState();
+    void restoreMemento(const Memento&#x26; memento) {
+        state_ = memento.getState();
+        std::cout &#x3C;&#x3C; "Restoring state to: " &#x3C;&#x3C; state_ &#x3C;&#x3C; std::endl;
     }
 
-    void showState() const {
-        std::cout << "Current State: " << state << "\n";
-    }
-};
-
-class Caretaker {
 private:
-    Memento memento;
-
-public:
-    void setMemento(const Memento& m) {
-        memento = m;
-    }
-
-    const Memento& getMemento() const {
-        return memento;
-    }
+    std::string state_;
 };
-```
+
+// Caretaker class
+class Caretaker {
+public:
+    void addMemento(const Memento&#x26; memento) {
+        mementos_.push_back(memento);
+    }
+
+    Memento getMemento(int index) const {
+        if (index >= 0 &#x26;&#x26; index &#x3C; mementos_.size()) {
+            return mementos_[index];
+        }
+        // Return an empty Memento if the index is out of bounds
+        return Memento("");
+    }
+
+private:
+    std::vector&#x3C;Memento> mementos_;
+};
+<strong>
+</strong></code></pre>
 
 #### 17. What is the Interpreter design pattern?
 
