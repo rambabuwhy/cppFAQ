@@ -67,3 +67,5 @@
 * [Detail-5-Locks](detail-5-locks.md)
 * [Detail-6-Singleton](detail-6-singleton.md)
 * [Detail-7-purevirtual](detail-7-purevirtual.md)
+* [unit-10](unit-10.md)
+* [Patterns](patterns.md)
