@@ -68,3 +68,7 @@
 * [Detail-7-purevirtual](detail-7-purevirtual.md)
 * [unit-10](unit-10.md)
 * [Patterns](patterns.md)
+* [unit-11](unit-11.md)
+* [PrefixSum](prefixsum.md)
+* [Sliding window](sliding-window.md)
+* [Two pointers](two-pointers.md)
