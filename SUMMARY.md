@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Cover](README.md)
+* [cppfaq](cppfaq.md)
+* [toboltboy](toboltboy.md)
 * [Index](index.md)
 * [unit-1](unit-1.md)
 * [Basics - 1](basics-1.md)
