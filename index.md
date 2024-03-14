@@ -10,3 +10,4 @@
 8. SOLID
 9. In Detail
 10. Patterns
+11. cheatsheet
