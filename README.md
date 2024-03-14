@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+---
+
 # Cover
 
-<figure><img src=".gitbook/assets/Black and Yellow Genius Autobiography Book Cover (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/White Minimalist Poem Book Cover (1).png" alt=""><figcaption></figcaption></figure>
