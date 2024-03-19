@@ -9,7 +9,7 @@
 **Answer:** The `override` specifier is used in derived class declarations to explicitly indicate that a function is intended to override a virtual function from a base class. It enhances code readability and helps catch errors during compilation if the specified function doesn't actually override a base class function.
 
 ```cpp
-cppCopy codeclass Derived : public Base {
+class Derived : public Base {
 public:
     void myVirtualFunction() override {
         // Implementation in the derived class
