@@ -14,4 +14,4 @@ layout:
 
 # Cover
 
-<figure><img src=".gitbook/assets/White Minimalist Poem Book Cover (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/White Minimalist Poem Book Cover.png" alt=""><figcaption></figcaption></figure>
