@@ -14,4 +14,4 @@ layout:
 
 # cppfaq
 
-<figure><img src=".gitbook/assets/Gray Minimal Business Ebook Cover (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Gray Minimal Business Ebook Cover (1) (2).png" alt=""><figcaption></figcaption></figure>
